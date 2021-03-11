@@ -1,0 +1,29 @@
+1.npx create react 
+2. create header, card,cardGrid, footer component.
+3.header is a fixed component and doesn´t change .
+4.the card grid comoponent recieves an array of color objects and draws/render a card component of
+ each color.
+  a)cardGrid will take up the the entire width of the page 
+  b)the cardGrid will have 3 colomns and as many rows as needed to display all color objects in the arry.
+  c)cardGrid is not responsible for making api calls
+5.  a)the card component will display name,year,color,pantone_value .
+    b)when it clicked it will copy the color value into the clip board 
+    c)when it will be clicked it will show the word "copiado" instead of the color and pantone_value for 
+      3 seconds than go back to normal
+
+6.footer component recieves the current page number and total number of pages and it also recieves
+   a call back function to alert the notify the parent componet that this page 
+   should change.
+    a)if the current  page number is 1 or less the anterior button will be disable
+    b)if the current page number is greater than or equal number of the pages the siguente
+    button will be disable.
+    c)unless disable when the anterior button is clicked it uses the call back function
+     to notify the parent component the page number should be current page -1
+
+     d)unless disable when the seguiente button is clicked it uses the call back function
+     to notify the parent component the page number should be current page +1
+
+7. a)app.js page gonna render the header,cardgrid,footer.and this color page gonna call the api from the backend
+  and it going to save the response and pass to the card grid components.
+  b)the app.js page also needs keep track which page we are fatching from the api.
+  c)when the page changes we need to refetch or call the api again using the new page number.

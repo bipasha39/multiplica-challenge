@@ -1,9 +1,10 @@
 .container{
-    height: 100%;
-    width: 100%;
-display: grid;
-  grid-template-columns:repeat(3,2fr);
-  grid-column-gap: 3rem;
-  grid-row-gap: 2rem;;
+    min-height: 100vh;
+    display: grid;
+   grid-template-columns:repeat(3,2fr);
+   grid-column-gap: 0.8rem;
+   grid-row-gap: 2px;
+   padding: 2px 4px;
+   margin: 0 auto;
 
 }

@@ -2,15 +2,11 @@ import React from "react";
 import Card from "../card/Card";
 import "./cardGrid.css";
 
-const CardGrid = () =>{
-   {
-    return (
-      <div className="container">
-        <Card />
-        
-        
-      </div>
-    );
-  }
-}
+const CardGrid = (props) => {
+  return (
+    <div className="container">
+      {props.colors.map((item) => {return <Card item={item} />;})}
+    </div>
+  );
+};
 export default CardGrid;

@@ -1,8 +1,17 @@
+.card-contents{
+  display: flex;
+  align-items: center;
+  background-color: #DDDDDD;
+
+
+border-radius: 10px;
+  
+}
 .card-content{
-background-color: bisque;
-  padding: 10px;
-  height:250px;
-  border-radius: 10px;
+
+width: 100%;
+
+  
 
 }
 .color-content{
@@ -11,8 +20,16 @@ background-color: bisque;
     align-items: center;
     justify-content: center;
 }
-.right {
-    direction: rtl;
+.color-content p{
+  margin-bottom: 0rem;
+  
+}
+.color-content h2{
+  margin-top: 0rem;
+  
+}
+.right p{
+    text-align: right;
   }
   .left{
     direction: initial; 

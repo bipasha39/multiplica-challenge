@@ -1,5 +1,19 @@
 .header-content{
+    text-align: center;
     border-radius: 10px;
-    background:gainsboro;
-    padding: 0px;
+    background:#FFFFFF;
+    padding: 2px 4px;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 50px;
+    
+    
+}
+.header-content h1{
+    color:#DDDDDD;
+    
+    
 }

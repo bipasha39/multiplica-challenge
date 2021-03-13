@@ -1,17 +1,17 @@
 import React from "react";
-import "./footer.css"
-const Footer = () =>{
-    return(
-        <div className="button-content">
-<div className="button">
-<button> Anterior </button>
-            <button> Siguiente </button>
+import Button from 'react-bootstrap/Button';
+import "./footer.css";
+const Footer = () => {
+  return (
+    <div className="button-content">
+      <div className="link">
+          <a href="#"> ‹Anterior </a>
+         
 
-</div>
-           
-            
-        </div>
-    )
-
-}
+          <a href="#"> Siguiente›</a>
+       
+      </div>
+    </div>
+  );
+};
 export default Footer;

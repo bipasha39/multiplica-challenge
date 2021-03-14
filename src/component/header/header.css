@@ -1,9 +1,9 @@
 .header-content{
     text-align: center;
     border-radius: 10px;
-    background:#FFFFFF;
+    background:white;
     padding: 2px 4px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -13,7 +13,12 @@
     
 }
 .header-content h1{
-    color:#DDDDDD;
+    color:black;
+    font-weight: 800;
     
     
+}
+.header-content p{
+    display: flex;
+    flex-direction: row;
 }

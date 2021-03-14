@@ -1,5 +1,13 @@
 
-
+.App{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-image: url("https://www.cbc.ca/kidscbc2/content/the_feed/rainbows_colour.jpg");
+    background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+}
 
 
 

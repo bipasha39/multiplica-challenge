@@ -4,7 +4,7 @@ import "./cardGrid.css";
 
 const CardGrid = (props) => {
   return (
-    <div className="card-grid">
+    <div className="container" >
 <div className="wrapper">
       {props.colors.map((item) => {return <Card item={item} />;})}
     </div>

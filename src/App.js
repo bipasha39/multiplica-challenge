@@ -15,21 +15,56 @@ import LargeCard from "./pages/largeCard/LargeCard";
 
 function App() {
   const [colors, setColors] = useState([]);
+  const[currentPage,setCurrentPage]=useState(1);
+  const[totalPages,setTotalPages]=useState();
+const pageDisplay=(page)=>{
+  
+  
+  let secondPage=  Math.ceil(page*1.5)
+  let firstPage= (secondPage - 1)
+  console.log(firstPage,"bla")
+  console.log(secondPage,"bla bla")
+  let firstPageColors
+  let secondPageColors
+  let finalColorPage
 
+
+  fetch(`https://reqres.in/api/colors?page=${firstPage}`)
+  .then((res) => res.json())
+  .then((json) => {
+    firstPageColors = json.data;
+    setTotalPages(json.total_pages)
+    console.log(firstPageColors, "first?page")
+  })
+  .catch((error) => {
+    console.log(error);
+  });
+
+  fetch(`https://reqres.in/api/colors?page=${secondPage}`)
+  .then((res) => res.json())
+  .then((json) => {
+    secondPageColors = json.data;
+    console.log(secondPageColors, "second page")
+
+    if (page%2 ===0){
+      finalColorPage = firstPageColors.slice(3).concat(secondPageColors)
+    } 
+    else {
+      finalColorPage = firstPageColors.concat(secondPageColors.slice(0,3))
+    }
+    console.log(typeof finalColorPage,"display")
+    setColors(finalColorPage)
+  })
+  .catch((error) => {
+    console.log(error);
+  });
+  
+}
   useEffect(() => {
     console.log("Fetching data from color API");
-
-    fetch(`https://reqres.in/api/colors`)
-      .then((res) => res.json())
-      .then((json) => {
-        setColors(json.data);
-        console.log(json);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  }, []);
-
+    pageDisplay(currentPage);
+  }, [currentPage]);
+console.log(totalPages,"pages")
   return (
     <Router>
       <div className="App">
@@ -46,7 +81,7 @@ function App() {
 
          
         </Switch>
-        <Footer />
+        <Footer currentPage={currentPage} setCurrentPage={setCurrentPage} totalPages={totalPages}/>
       </div>
     </Router>
   );

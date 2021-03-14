@@ -1,4 +1,4 @@
-.link {
+.button {
   display: flex;
   justify-content: space-between;
   padding: 0;
@@ -6,13 +6,11 @@
   background: none;
   outline: none;
 }
-.link a{
-    text-decoration: none;
-    color: rgb(137, 137, 137);
-}
+
 .button-content {
-  border-radius: 10px;
-  background:#FFFFFF;
+  
+  background:white;
   padding: 10px;
-  border: 1px solid black;
+  /* border: 1px solid black; */
+  border-radius: 10px;
 }

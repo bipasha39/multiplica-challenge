@@ -12,8 +12,7 @@
       3 seconds than go back to normal
 
 6.footer component recieves the current page number and total number of pages and it also recieves
-   a call back function to alert the notify the parent componet that this page 
-   should change.
+   a call back function change the current page .
     a)if the current  page number is 1 or less the anterior button will be disable
     b)if the current page number is greater than or equal number of the pages the siguente
     button will be disable.
@@ -25,5 +24,5 @@
 
 7. a)app.js page gonna render the header,cardgrid,footer.and this color page gonna call the api from the backend
   and it going to save the response and pass to the card grid components.
-  b)the app.js page also needs keep track which page we are fatching from the api.
+  b)the app.js page also needs keep track which page we are fatching from the api and total number of pages.
   c)when the page changes we need to refetch or call the api again using the new page number.

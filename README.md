@@ -1,6 +1,6 @@
 ### ` Introduction to the application`
 
-This application is able to give you functonality to copy color in your clipboard by just one click.
+This application is able to give you functonality to copy different types of color´s in your clipboard by just one click.
 
 ### `Framework used in this project`
  This project was booting up with Reactjs and Bootstrap
